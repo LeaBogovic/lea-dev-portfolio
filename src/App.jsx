@@ -308,7 +308,7 @@ function App() {
         <div className="hero-content">
           <div className="hero-intro">
             <div className="hero-copy">
-              <p className="eyebrow">HI, I’M LEA</p>
+              <p className="eyebrow">HI, I’M</p>
 
               <h1>Lea Bogovic</h1>
 
