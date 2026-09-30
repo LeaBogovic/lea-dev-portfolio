@@ -1,0 +1,325 @@
+.playground-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 106px auto 0;
+}
+
+.playground-shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.playground-sidebar {
+  display: grid;
+  gap: 12px;
+}
+
+.playground-tab {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--text);
+  text-align: left;
+  background: var(--window-background);
+  box-shadow: 0 14px 35px var(--shadow);
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.playground-tab:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+}
+
+.playground-tab.active {
+  border-color: var(--cyan);
+  background: rgba(124, 232, 255, 0.12);
+}
+
+.playground-file {
+  color: var(--cyan);
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.playground-tab strong {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.playground-tab small {
+  color: var(--muted-text);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.playground-window {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--window-background);
+  box-shadow: 0 18px 50px var(--shadow);
+}
+
+.playground-window-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+  font-size: 0.76rem;
+  background: var(--bar-background);
+}
+
+.playground-window-content {
+  padding: 24px;
+}
+
+.play-game {
+  display: grid;
+  gap: 16px;
+}
+
+.game-status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted-text);
+  font-family: "DM Mono", monospace;
+  font-size: 0.73rem;
+}
+
+.playground-button {
+  justify-self: start;
+  padding: 10px 14px;
+  border: 1px solid var(--cyan);
+  border-radius: 10px;
+  color: #062034;
+  font-family: "DM Mono", monospace;
+  font-size: 0.76rem;
+  background: var(--cyan);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.playground-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 24px rgba(124, 232, 255, 0.24);
+}
+
+.world-preview {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border: 1px solid rgba(124, 232, 255, 0.28);
+  border-radius: 16px;
+}
+
+.world-preview p {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  margin: 0;
+  color: #e8f7ff;
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.world-moon {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #f5f7ff;
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.world-object {
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+
+.world-plant {
+  left: 18%;
+  bottom: 18%;
+  color: #8effb4;
+  font-size: 2rem;
+}
+
+.world-lamp {
+  right: 22%;
+  bottom: 25%;
+  color: #ffe7a3;
+  font-size: 1.9rem;
+}
+
+.world-star {
+  left: 48%;
+  top: 20%;
+  color: #ffd5f0;
+  font-size: 1.4rem;
+}
+
+.world-cube {
+  right: 16%;
+  bottom: 14%;
+  color: #7ce8ff;
+  font-size: 1.5rem;
+}
+
+.world-object-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.world-object-buttons button {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  background: rgba(124, 232, 255, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.world-object-buttons button:hover {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+}
+
+.world-object-buttons button.selected {
+  border-color: var(--purple);
+  background: rgba(198, 156, 255, 0.18);
+}
+
+.signal-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.signal-pad {
+  aspect-ratio: 1 / 1;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  opacity: 0.72;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.signal-pad:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+.signal-pad:disabled {
+  cursor: default;
+}
+
+.signal-pad.cyan {
+  background: #63dbff;
+}
+
+.signal-pad.purple {
+  background: #b58aff;
+}
+
+.signal-pad.pink {
+  background: #ff9fc8;
+}
+
+.signal-pad.green {
+  background: #7df0a6;
+}
+
+.signal-pad.lit {
+  opacity: 1;
+  box-shadow: 0 0 24px currentColor;
+  transform: scale(1.04);
+}
+
+.star-game-area {
+  position: relative;
+  display: grid;
+  height: 240px;
+  overflow: hidden;
+  border: 1px dashed rgba(124, 232, 255, 0.38);
+  border-radius: 14px;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(124, 232, 255, 0.13), transparent 40%),
+    rgba(124, 232, 255, 0.035);
+}
+
+.star-game-area p {
+  max-width: 180px;
+  margin: 0;
+  color: var(--muted-text);
+  text-align: center;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.catch-star {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: var(--pink);
+  font-size: 1.45rem;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  animation: star-pulse 0.7s ease-in-out infinite alternate;
+}
+
+.catch-star:hover {
+  color: var(--cyan);
+  transform: translate(-50%, -50%) scale(1.24) rotate(18deg);
+}
+
+@keyframes star-pulse {
+  from {
+    filter: drop-shadow(0 0 2px var(--pink));
+    transform: translate(-50%, -50%) scale(0.9) rotate(-8deg);
+  }
+
+  to {
+    filter: drop-shadow(0 0 10px var(--pink));
+    transform: translate(-50%, -50%) scale(1.12) rotate(8deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .playground-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .playground-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .playground-window-content {
+    padding: 18px;
+  }
+
+  .signal-board {
+    gap: 10px;
+  }
+
+  .game-status-row {
+    flex-direction: column;
+  }
+}
