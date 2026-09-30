@@ -318,7 +318,7 @@ function App() {
               </h2>
 
               <p>
-                I’m a final-year software design and game development student with experience in Unity, C# and VR training projects. Unity is the area I feel strongest in, and I
+                I’m a graduate software design and game development student with experience in Unity, C# and VR training projects. Unity is the area I feel strongest in, and I
                 also really enjoy web design and building simple interactive
                 experiences.
               </p>
